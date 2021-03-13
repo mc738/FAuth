@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FAuth", "FAuth\FAuth.fsproj", "{E2BBAFF8-413C-4516-B1A1-5774C5C9ACDA}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FAuth.Extensions", "FAuth.Extensions\FAuth.Extensions.fsproj", "{B0ADF6BA-441C-4EA4-B4F7-7997A364CC2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2BBAFF8-413C-4516-B1A1-5774C5C9ACDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2BBAFF8-413C-4516-B1A1-5774C5C9ACDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2BBAFF8-413C-4516-B1A1-5774C5C9ACDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2BBAFF8-413C-4516-B1A1-5774C5C9ACDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0ADF6BA-441C-4EA4-B4F7-7997A364CC2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0ADF6BA-441C-4EA4-B4F7-7997A364CC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0ADF6BA-441C-4EA4-B4F7-7997A364CC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0ADF6BA-441C-4EA4-B4F7-7997A364CC2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
