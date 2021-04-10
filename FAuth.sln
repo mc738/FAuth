@@ -4,6 +4,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FAuth", "FAuth\FAuth.fsproj
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FAuth.Extensions", "FAuth.Extensions\FAuth.Extensions.fsproj", "{B0ADF6BA-441C-4EA4-B4F7-7997A364CC2D}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FAuth.Console", "FAuth.Console\FAuth.Console.fsproj", "{0E2A469E-7015-493E-A9EC-0BE481960F0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{B0ADF6BA-441C-4EA4-B4F7-7997A364CC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0ADF6BA-441C-4EA4-B4F7-7997A364CC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0ADF6BA-441C-4EA4-B4F7-7997A364CC2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E2A469E-7015-493E-A9EC-0BE481960F0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2A469E-7015-493E-A9EC-0BE481960F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2A469E-7015-493E-A9EC-0BE481960F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2A469E-7015-493E-A9EC-0BE481960F0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
