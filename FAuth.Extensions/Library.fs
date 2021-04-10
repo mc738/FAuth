@@ -3,6 +3,8 @@
 open System
 open System.Text
 open FAuth.Tokens.Jwt
+open FUtil
+open FUtil.Serialization
 open Microsoft.AspNetCore.Authentication
 open Microsoft.AspNetCore.Authentication.JwtBearer
 open Microsoft.AspNetCore.Builder
@@ -45,13 +47,29 @@ module AspNetCore =
 
         member builder.AddFAuth(ctx: FAuthContext) =
             builder
-                .AddAuthentication()
+                .AddAuthentication(authenticationOptions)
                 .AddJwtBearer(Action<JwtBearerOptions>(getJwtBearerOptions ctx.TokenSettings))
             |> ignore
 
     type IApplicationBuilder with
     
-        member builder.AddFAuth(ctx : FAuthContext) =
+        member builder.UseFAuth(ctx : FAuthContext) =
             builder
-                .UseCors(configureCors ctx)
+                //.UseCors(configureCors ctx)
                 .UseAuthentication()
+                
+[<AutoOpen>]
+module FAuth =
+    
+    type FAuthContext with
+    
+        static member Load(path : string) =
+            match Files.tryReadText path with
+            | Ok text -> Json.tryDeserialize<FAuthContext> text
+            | Error e -> Error e
+            
+            
+        member context.Save(path : string) =
+            match Json.trySerialize context with
+            | Ok json -> Files.tryWriteText path json
+            | Error e -> Error e 

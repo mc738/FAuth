@@ -3,6 +3,7 @@ namespace FAuth
 open System.Text.Json.Serialization
 open FAuth.Core
 open FAuth.Tokens.Jwt
+//open 
 
 [<CLIMutable>]
 type FAuthContext =
@@ -10,11 +11,11 @@ type FAuthContext =
       Security: SecurityContext
       [<JsonPropertyName("tokenSettings")>]
       TokenSettings: JwtSettings }
-    static member Load(path: string) =
-        Error "Could not load."
 
-    member context.Save(path: string) = Error "Could not save."
-
+    member context.HashPassword(password : string) (salt : string) =
+        Utils.saltFromString salt
+        |> Utils.hashPassword context.Security password
+    
     member context.ValidatePassword(expected : string, given : string, salt : byte array) =
         let hashedPassword = Utils.hashPassword context.Security given salt
         expected = hashedPassword

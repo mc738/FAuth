@@ -15,6 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\FUtil\FUtil\FUtil.fsproj" />
       <ProjectReference Include="..\FAuth\FAuth.fsproj" />
     </ItemGroup>
 
